@@ -2,8 +2,9 @@
 
 buildscript {
     repositories {
+        maven{ url 'https://maven.aliyun.com/nexus/content/groups/public/' allowInsecureProtocol true}
         google()
-        jcenter()
+        //jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.2'
@@ -14,6 +15,7 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' allowInsecureProtocol true }
         mavenCentral()
         google()
         jcenter()
@@ -24,3 +26,4 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
